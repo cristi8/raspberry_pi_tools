@@ -1,0 +1,8 @@
+Add this to /network/interfaces:
+
+allow-hotplug wlan0
+auto wlan0
+
+iface wlan0 inet dhcp
+    wpa-ssid "MY_AP_SSID"
+    wpa-psk "MY_AP_PASSWORD"
