@@ -1,0 +1,9 @@
+For bluetooth_autoconnect.sh
+
+apt-get install bluez-tools
+put the phone's bluetooth device address into the file /root/phone_bluetooth_mac
+execute the script at system startup (/etc/rc.local). Example:
+	/root/tools/networking/bluetooth_auto_connect.sh > /dev/null &
+
+(the bt-network script is blocking if the connection succeds)
+
