@@ -1,0 +1,13 @@
+[Unit]
+Description=Export Prometheus metrics from this device
+After=network.target
+
+[Service]
+User=root
+Group=root
+Restart=always
+RestartSec=10
+ExecStart=/usr/sbin/rpi_exporter.py
+
+[Install]
+WantedBy=multi-user.target
