@@ -9,7 +9,7 @@ import socket
 logger = logging.getLogger(__name__)
 HOSTNAME = socket.gethostname()
 
-MON_TEMP = prometheus_client.Gauge('temp', 'Temperature', ['hostname'])
+MON_TEMP = prometheus_client.Gauge('temp', 'Temperature', ['hostname'], namespace='rpi')
 
 
 def measure_temp():
